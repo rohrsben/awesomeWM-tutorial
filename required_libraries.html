@@ -4,10 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="tutorial.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/tutorial.css">
+    <title>Libraries - AwesomeWM Tutorial</title>
 </head>
 <body>
-    
+    <div class="header">
+        <h1>Default libraries</h1>
+        <hr>
+    </div>
+
+    <div>
+        <p>
+            The functionality we want to add to awesome (like, you know, viewing windows) can be provided by awesome's default libraries. In this page, we will make our first edits to rc.lua.test by adding the rest of the defaults back in, with a brief explanation for each one. Everything is gonna get a more detailed explanation later on, so don't worry if some things don't make sense. Let's start with the ones that are already in there.
+        </p>
+
+        <h2>Gears</h2>
+
+        <p>
+            Gears pretty much provides methods for interacting with your computer itself. E.g. Cairo (the graphics library used by awesome), strings and timers, the filesystem, etc. The latter is why it's included in rc.lua.test, in fact; if you look at the first non-<code>require</code> line, you'll see <code>gears.filesystem.get_xdg_config_home()</code>. This is how awesome accesses the tutorial-background.png to set the background.
+        </p>
+
+
+    </div>
+
+    <div>
+        <br>
+
+        <ul class="footer">
+            <li class="footer-prev">
+                <a href="brief_lua_intro.html">Prev</a>
+            </li>
+
+            <li class="footer-next">
+                <a href="#">Next</a>
+            </li>
+        </ul>
+
+        <br><br><br><br><br><br><br><br><br><br>
+    </div>
 </body>
 </html>
