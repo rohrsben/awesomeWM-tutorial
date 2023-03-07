@@ -24,7 +24,25 @@
             Gears pretty much provides methods for interacting with your computer itself. E.g. Cairo (the graphics library used by awesome), strings and timers, the filesystem, etc. The latter is why it's included in rc.lua.test, in fact; if you look at the first non-<code>require</code> line, you'll see <code>gears.filesystem.get_xdg_config_home()</code>. This is how awesome accesses the tutorial-background.png to set the background.
         </p>
 
+        <h2>Awful</h2>
 
+        <p>
+            Awful is the library provided for interacting with application windows and hardware like screens, or the mouse and keyboard. Thus, the second line in rc.lua.default: <code>awful.screen.connect_for_each_screen</code> is what sets the background that gears accessed. <code>connect_for_each_screen</code> can do a lot more, but we'll get into that later.
+        </p>
+
+        <h2>Beautiful</h2>
+
+        <p>
+            Beautiful is awesome's theme library. It deals with how windows are styled, what fonts are used in titlebars, etc. Your theme is specified in a different file: currently, tutorial-theme/tutorial-theme.lua. The name can be anything you like, which also allows you to have multiple themes and switch between them. This theme file is what beautiful mostly interacts with/returns values from.
+        </p>
+
+        <br>
+        <hr class="dashed">
+        <br>
+
+        <p>
+            Since now is as good a time as any, let's talk vocab. In general, I'm going to try and use the words that awesome and X11 use for things. Since this vocab felt confusing to me at first, I'll try and mention when it's different from common parlance. With that in mind, what are commonly called "windows" will be referred to as "clients" from now on. Here's a test sentence for you to say: I'm reading this sentence in a client. Nice!
+        </p>
     </div>
 
     <div>
@@ -36,7 +54,7 @@
             </li>
 
             <li class="footer-next">
-                <a href="#">Next</a>
+                <a href="libraries2.html">Next</a>
             </li>
         </ul>
 

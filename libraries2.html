@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/obsidian.min.css">
+    <link rel="stylesheet" href="styles/tutorial.css">
+    <title>Default libraries continued - AwesomeWM Tutorial</title>
+
+    <script src="scripts/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head> 
+<body>
+    <div class="header content">
+        <h1>Default libraries - Continued</h1>
+        <hr>
+    </div>
+
+    <div class="content">
+        <p>
+            With those 3 out of the way, we can start adding in new ones. From now on, beneath the footer at the bottom of a page, I'm going to include a syntax-highlighted full version of whatever file we're working on so you can make sure you're up to date. It's a bit unorthodox, but hey, this is my tutorial.
+        </p>
+
+        <h2>Wibox</h2>
+
+        <p>
+            Wibox is awesome's library for creating widgets. Widgets are things like a clock or volume control, and widgets live in the taskbar. Wibox includes the ability to make most things you can think of, though some are harder than others. Now, let's add it to our rc.lua.test:
+
+            <pre>
+                <code class="language-lua">local beautiful = ...
+
+-- Widgets library
+local wibox = require("wibox")
+
+beautiful.init(...</code>
+            </pre>
+        </p>
+    </div>
+
+    <div class="content">
+        <br>
+
+        <ul class="footer">
+            <li class="footer-prev">
+                <a href="#">Prev</a>
+            </li>
+
+            <li class="footer-next">
+                <a href="#">Next</a>
+            </li>
+        </ul>
+
+        <br><br><br><br><br><br><br><br><br><br>
+    </div>
+</body>
+</html>
