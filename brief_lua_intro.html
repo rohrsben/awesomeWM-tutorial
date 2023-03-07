@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tutorial.css">
+    <link rel="stylesheet" href="brief_lua_intro.css">
+    <title>First Steps - AwesomeWM Tutorial</title>
+</head>
+<body>
+    <h2>First, a bit of intro to Lua</h2>
+
+    <p>
+        If you're anything like me, and have never used Lua before, the default rc.lua doesn't make much sense. If you're already comfortable with it, feel free to skip this page. If you haven't, I recommend you check it out, though note that it's written as if you have at least some programming experience.
+    </p>
+
+    <h2 class="code_header">local x = require("x")</h2>
+
+    <p>At the very top of the default rc.lua is a bunch of statements like this. There's two unknowns here: <code class="one_off">local</code> and <code class="one_off">require</code>.</p>
+
+    <p>
+        <code class="one_off">local</code> is just a lua term defining the scope of the variable -- aptly, local scope. <code class="one_off">require</code> is a bit like an import statement in python. Whatever gets <code class="one_off">require</code>d is evaluated at require time, and the code getting evaluated can also include a return statement. So the statement <code class="one_off">local wibox = require("wibox")</code> can be thought of as <code class="one_off">Wibox myWibox = new Wibox();</code> ...more or less, at least.
+    </p>
+
+    <h2>If statements and functions</h2>
+
+    <p>
+        Not much to this one, it just threw me off at first. <code class="one_off">if</code>s work a lot like python, with no parenthesis, but instead of using whitespace to determine a code block they use an <code class="one_off">end</code> statement. Functions do the same thing.
+    </p>
+
+    <p>
+        On second thought, maybe I should've named this section "Code blocks". Oh well.
+    </p>
+
+    <h2 class="code_header">".."</h2>
+
+    <p>
+        The double period, <code class="one_off">..</code>, is a lua thing for combining two strings.
+    </p>
+
+    <h2 class="code_header">"{{{" and "}}}"</h2>
+
+    <p>
+        I don't actually know about this one, but as it only shows up in comments, I think it's the dev's way of being able to parse the rc.lua file itself with markdown on the documentation website. Actually, I'm gonna use this space to mention that I think the whole default rc.lua is horribly laid out. Why did they use so many fucking tabs everywhere, man? Whatever.
+    </p>
+
+    <p>
+        Everything else you should be able to pick up just by following the tutorial. So with that out of the way, let's make some actual changes eh?
+    </p>
+
+    <footer><a href="index.html">Prev</a> <a href="required_libraries.html">Next</a></footer>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+</html>
