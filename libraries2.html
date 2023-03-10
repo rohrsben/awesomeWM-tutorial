@@ -36,6 +36,55 @@ local wibox = require("wibox")
 beautiful.init(...</code>
             </pre>
         </p>
+
+        <h2>Menubar</h2>
+
+        <p>
+            The menubar is more like a fancy wibox than its own library. It implements the freedesktop menu stuff, and acts as a launcher for .desktop files.
+
+            <pre>
+                <code class="language-lua">local wibox = ...
+
+-- Menubar
+local menubar = require("menubar")
+
+beautiful.init(...</code>
+            </pre>
+        </p>
+
+        <h2>Awful.autofocus</h2>
+
+        <p>
+            Also not so much a library, but a useful thing to have. <code>require</code>ing it automatically enables its functionality: making sure a window has focus if it should.
+
+            <pre>
+                <code class="language-lua">local menubar = ...
+
+-- Autofocus windows
+require("awful.autofocus")
+
+beautiful.init(...</code>
+            </pre>
+        </p>
+
+        <h2>Naughty</h2>
+
+        <p>
+            I left naughty for last, because it has to do with what we'll be adding next. Naughty is a desktop notification library/system, which allows you to send your own notifications and handles them from other apps, like a spotify song change.
+
+            <pre>
+                <code class="language-lua">require("...")
+
+-- Notifications
+local naughty = require("naughty")
+
+beautiful.init(...</code>
+            </pre>
+        </p>
+
+        <p>
+            Now, we make our first change to rc.lua.test that actually adds some functionality!
+        </p>
     </div>
 
     <div class="content">
@@ -43,15 +92,45 @@ beautiful.init(...</code>
 
         <ul class="footer">
             <li class="footer-prev">
-                <a href="#">Prev</a>
+                <a href="libraries.html">Prev</a>
             </li>
 
             <li class="footer-next">
-                <a href="#">Next</a>
+                <a href="startup_errors.html">Next</a>
             </li>
         </ul>
 
         <br><br><br><br><br><br><br><br><br><br>
+        
+    </div>
+
+    <div class="post-content">
+        <hr class="dashed">
+        <pre>
+            <code class="language-lua">local gears = require("gears")
+local awful = require("awful")
+local beautiful = require("beautiful")
+
+-- Widgets library
+local wibox = require("wibox")
+
+-- Menubar
+local menubar = require("menubar")
+
+-- Autofocus windows
+require("awful.autofocus")
+
+-- Notifications
+local naughty = require("naughty")
+
+beautiful.init(gears.filesystem.get_xdg_config_home() .. 
+    "awesome/tutorial-theme/tutorial-theme.lua")
+
+awful.screen.connect_for_each_screen(function(s)
+    gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+end)</code>
+        </pre>
+        <br><br><br><br><br>
     </div>
 </body>
 </html>

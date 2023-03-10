@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/obsidian.min.css">
+    <link rel="stylesheet" href="styles/tutorial.css">
+    <title>Startup Errors - AwesomeWM Tutorial</title>
+
+    <script src="scripts/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
+<body>
+    <div class="header content">
+        <h1>Handling Startup Errors</h1>
+        <hr>
+    </div>
+
+    <div class="content">
+        <p>
+            This part is going to come in two blocks, all unchanged code from the default rc.lua. That's because it's not something that I want to mess up, and having it be standard makes the most sense. First:
+
+            <pre>
+                <code class="language-lua">if awesome.startup_errors then
+    naughty.notify({ preset = naughty.config.presets.critical,
+                    title = "Oops, there were errors during startup!",
+                    text = awesome.startup_errors })
+end</code>
+            </pre> 
+        </p>
+
+        <p>
+            
+        </p>
+    </div>
+
+    <div class="content">
+        <br>
+
+        <ul class="footer">
+            <li class="footer-prev">
+                <a href="libraries2.html">Prev</a>
+            </li>
+
+            <li class="footer-next">
+                <a href="#">Next</a>
+            </li>
+        </ul>
+
+        <br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <div class="post-content">
+        <hr class="dashed">
+        <pre>
+            <code class="language-lua">
+                
+            </code>
+        </pre>
+        <br><br><br><br><br>
+    </div>
+</body>
+</html>

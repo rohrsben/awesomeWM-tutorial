@@ -47,7 +47,6 @@
 
     <div class="content">
         <br>
-
         <ul class="footer">
             <li class="footer-prev">
                 <a href="brief_lua_intro.html">Prev</a>
@@ -59,6 +58,35 @@
         </ul>
 
         <br><br><br><br><br><br><br><br><br><br>
+    </div>
+
+    <div class="post-content">
+        <hr class="dashed">
+        <pre>
+            <code class="language-lua">local gears = require("gears")
+local awful = require("awful")
+local beautiful = require("beautiful")
+
+-- Widgets library
+local wibox = require("wibox")
+
+-- Menubar
+local menubar = require("menubar")
+
+-- Autofocus windows
+require("awful.autofocus")
+
+-- Notifications
+local naughty = require("naughty")
+
+beautiful.init(gears.filesystem.get_xdg_config_home() .. 
+    "awesome/tutorial-theme/tutorial-theme.lua")
+
+awful.screen.connect_for_each_screen(function(s)
+    gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+end)</code>
+        </pre>
+        <br><br><br><br><br>
     </div>
 </body>
 </html>
